@@ -1,0 +1,31 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.feedback {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  
+  .message {
+    margin-bottom: 10px;
+  }
+
+  .feedbackMessage {
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease-in-out; // Adjust time as needed
+    opacity: 1; // Start fully visible
+  }
+  
+  .feedbackMessage.hide {
+    opacity: 0; // Fully transparent
+  }
+
+  .success {
+    color: green;
+  }
+
+  .error {
+    color: red;
+    font-style: italic;
+  }
+}

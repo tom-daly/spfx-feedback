@@ -1,0 +1,49 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "spfx-feedback-client-side-solution",
+        "id": "e99ef700-77de-41fd-bda1-9af3e9ca41ab",
+        "version": "1.0.0.3",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": false,
+        "isDomainIsolated": false,
+        "developer": {
+            "name": "",
+            "websiteUrl": "",
+            "privacyUrl": "",
+            "termsOfUseUrl": "",
+            "mpnId": "Undefined-1.18.2"
+        },
+        "metadata": {
+            "shortDescription": {
+                "default": "spfx-feedback description"
+            },
+            "longDescription": {
+                "default": "spfx-feedback description"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+        },
+        "features": [
+            {
+                "title": "spfx-feedback Feature",
+                "description": "The feature that activates elements of the spfx-feedback solution.",
+                "id": "87936fed-be32-4722-a28a-c154555c4a53",
+                "version": "1.0.0.0",
+                "assets": {
+                    "elementManifests": [
+                        "elements.xml",
+                        "listElements.xml"
+                    ],
+                    "elementFiles": [
+                        "listSchema_Feedback.xml"
+                    ]
+                }
+            }
+        ]
+    },
+    "paths": {
+        "zippedPackage": "solution/spfx-feedback.sppkg"
+    }
+}

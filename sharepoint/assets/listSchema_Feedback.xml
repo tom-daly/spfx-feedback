@@ -1,0 +1,43 @@
+<List xmlns:ows="Microsoft SharePoint" Title="List Schema" Name="ListSchema" Direction="$Resources:Direction;" Url="Lists/ListSchema" BaseType="0" EnableContentTypes="FALSE" FolderCreation="FALSE" VersioningEnabled="FALSE" DisableAttachments="TRUE"
+  xmlns="http://schemas.microsoft.com/sharepoint/" RootWebOnly="FALSE">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01004387b0224193407a8e655bd9799a5ac8" Name="Feedback">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <!-- Custom Field refs -->
+          <FieldRef ID="{eb2ffd0c-538e-46bc-8fe9-f2e1b6c404a0}" Name="Message" />
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Title" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" FromBaseType="TRUE" ColName="nvarchar1" />
+      <!--Custom fields -->
+      <Field ID="{eb2ffd0c-538e-46bc-8fe9-f2e1b6c404a0}" Name="Message" StaticName="Message" DisplayName="" Type="Note" Group="Feedback Site Columns" SourceID="http://schemas.microsoft.com/sharepoint/v3" Sealed="FALSE" Overwrite="TRUE" Required="FALSE" Hidden="FALSE" RichText="FALSE" NumLines="6" />
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <!-- Name is the InternalName -->
+          <FieldRef Name="Title"></FieldRef>
+          <!-- Custom field refs-->
+          <FieldRef Name="Message"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID" />
+          </OrderBy>
+        </Query>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
